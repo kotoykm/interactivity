@@ -1,0 +1,22 @@
+<style>
+    .apparition {
+        /*Fowards significa que de aqui en adelante el elemento se queda donde cayo al final de la animacion*/
+        animation: appearAnimation 1s ease-in-out forwards;
+    }
+
+    @keyframes appearAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<div data-controller="hello" data-hello-target="text" style="opacity: 0;" class="container mt-5">
+    <h1 data-action="click->hello#miMetodoP">Prácticas con Javascript</h1>
+    <p data-hello-target="sentence" data-action="click->hello#changeText">Haz clic en este texto para recibir un saludo</p>
+</div>
